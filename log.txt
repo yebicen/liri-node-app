@@ -1,25 +1,29 @@
 
 
-spotify-this-song  'TheSign' 
-Song Name: thesign; 
-Artist: urall.me; 
-Album: thesign; 
-Preview URL: https://p.scdn.co/mp3-preview/b3858907f9af8fe62748425717be5093336a3a1d?cid=8b8f340352af4367acc8893a2524041f
+movie-this  'Mr.Nobody.' 
+Movie's title: Mr. Nobody; 
+Released year: 26 Sep 2013; 
+IMDB rating: 7.9; 
+Country produced: Belgium, Germany, Canada, France, USA, UK; 
+Language: English, Mohawk; 
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.; 
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham; 
+Rotten Tomatoes Rating: 66%
 
-spotify-this-song  'blue' 
-Song Name: Mr. Blue Sky; 
-Artist: Electric Light Orchestra; 
-Album: Out of the Blue; 
-Preview URL: https://p.scdn.co/mp3-preview/bb98f258a01d52c9b1c86ae82c67132bd52f29af?cid=8b8f340352af4367acc8893a2524041f
+do-what-it-says spotify-this-song  "I Want it That Way" 
 
-spotify-this-song  'love' 
-Song Name: Love Lies (with Normani); 
-Artist: Khalid; 
-Album: Love Lies (with Normani); 
-Preview URL: https://p.scdn.co/mp3-preview/d53d5678b946219bd6df0b3d04ce0b3554f167d4?cid=8b8f340352af4367acc8893a2524041f
+do-what-it-says  'I Want it That Way' 
+Song Name: I Want It That Way; 
+Artist: Backstreet Boys; 
+Album: The Hits--Chapter One; 
+Preview URL: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=8b8f340352af4367acc8893a2524041f
 
-spotify-this-song  'hi' 
-Song Name: Hi Bich; 
-Artist: Bhad Bhabie; 
-Album: Hi Bich; 
-Preview URL: https://p.scdn.co/mp3-preview/7107022706b0a381835896b49b4d2826e97e442f?cid=8b8f340352af4367acc8893a2524041f
+movie-this  'shrek' 
+Movie's title: Shrek; 
+Released year: 18 May 2001; 
+IMDB rating: 7.9; 
+Country produced: USA; 
+Language: English; 
+Plot: After his swamp is filled with magical creatures, Shrek agrees to rescue Princess Fiona for a villainous lord in order to get his land back.; 
+Actors: Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow; 
+Rotten Tomatoes Rating: 88%

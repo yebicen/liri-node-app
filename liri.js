@@ -1,13 +1,8 @@
 require("dotenv").config();
 
-// Load the fs package to read and write
 var fs = require("fs");
-var nodeSpotifyApi = require("node-spotify-api")
 var keys = require("./keys.js");
 var request = require("request");
-
-// console.log(keys.spotify)
-// console.log(keys.twitter)
 
 var action = process.argv[2];
 var value = process.argv[3];
@@ -30,7 +25,7 @@ switch (action) {
   }
 
 function spotify() {
-    // If no song is provided then your program will default to "The Sign" by Ace of Base.
+// If no song is provided then your program will default to "The Sign" by Ace of Base.
 var Spotify = require('node-spotify-api');
 if (value) {
   var songname = value;
@@ -62,12 +57,10 @@ fs.appendFile("log.txt", "\n\n" + action +"  '" + songname +"' " + songInfo, fun
   if (err) {
     return console.log(err);
   }
-});
+}); //end of append file
 
-});
-
-//end of spotify function
-}
+}); //end of spotify request
+} //end of spotify function
  
 function movie() {
 // If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
@@ -82,9 +75,8 @@ else{
 // Then run a request to the OMDB API with the movie specified
 request("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy", function(error, response, body) {
 
-  // If the request is successful (i.e. if the response status code is 200)
+// If the request is successful (i.e. if the response status code is 200)
   if (!error && response.statusCode === 200) {
-
     console.log("The movie's title is: " + JSON.parse(body).Title);
     console.log("The year released is: " + JSON.parse(body).Released);
     console.log("The movie's IMDB rating is: " + JSON.parse(body).imdbRating);
@@ -100,13 +92,10 @@ request("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy",
       if (err) {
         return console.log(err);
       }
-    });
-
-
-  }
-});
-//end of movie function
-  }
+    }); //end of append file
+  } 
+}); //end of OMDB request
+}//end of movie function
 
 function twitter() {
 var Twitter = require('twitter');
@@ -125,26 +114,19 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
         console.log("Screen name: " , tweets[i].user.screen_name);
         console.log("Content: " , tweets[i].text);
         console.log("Created at: " , tweets[i].user.created_at);
-    }
+    } //end of for loop
   }
-});
-//end of twitter function
-}
+});  //end of twitter request
+} //end of twitter function
 
 function dowhatitsays(){
-// fs is a core Node package for reading and writing files
-var fs = require("fs");
-
 fs.readFile("random.txt", "utf8", function(error, datatxt) {
-
-  // If the code experiences any errors it will log the error to the console.
+// If the code experiences any errors it will log the error to the console.
   if (error) {
     return console.log(error);
   }
-  // We will then print the contents of data
-  console.log(datatxt);
-  // Then split it by commas (to make it more readable)
-  var dataArr = datatxt.split(",");
+// Then split it by commas
+var dataArr = datatxt.split(",");
 
 if (dataArr[0] === "spotify-this-song"){
   defaultsongname  = eval(dataArr[1]);
@@ -161,6 +143,12 @@ if (dataArr[0] === "movie-this"){
 if (dataArr[0] === "my-tweets"){
   twitter();
 }
+
+fs.appendFile("log.txt", "\n\n" + action + " " + dataArr[0] +"  " + dataArr[1] +" ", function(err) {
+  if (err) {
+    return console.log(err);
+  }
+});
 
 });
 //end of dowhatitsays function
